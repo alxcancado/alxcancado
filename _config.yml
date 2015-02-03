@@ -15,7 +15,7 @@ footer:
   copyright: Alex Lima Lopes Cancado
   location: Location
   social: Around the Web
-  credits: Credits
+  credits: Hire Me!
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
@@ -29,6 +29,11 @@ social:
     url: http://bitbucket.org/alxcancado
   - title: github
     url: http://github.com/alxcancado
+  - title: quora
+    url: http://www.quora.com/Alex-Lima-Lopes-Can%C3%A7ado
+  - title: disqus
+    url: https://disqus.com/by/PirateAlx/
+  
 
 # Postal address (add as many lines as necessary)
 address:
