@@ -29,17 +29,17 @@ social:
     url: http://bitbucket.org/alxcancado
   - title: github
     url: http://github.com/alxcancado
-  - title: quora
-    url: http://www.quora.com/Alex-Lima-Lopes-Can%C3%A7ado
-  - title: disqus
-    url: https://disqus.com/by/PirateAlx/
+  #- title: quora
+  #  url: http://www.quora.com/Alex-Lima-Lopes-Can%C3%A7ado
+  #- title: disqus
+  #  url: https://disqus.com/by/PirateAlx/
   
 
 # Postal address (add as many lines as necessary)
 address:
   - line: 7 Alta Pl.
-  - line: Queenstown, 9300
-  - line: New Zealand
+  - line: Queenstown, 9300,
+  #- line: New Zealand
 
 # Credits content
 credits: 'I can create amazing things inside The Matrix using Swift, Wordpress, HTML5, JS, CSS, JQuery, Bootstrap, Phonegap, C# and Unity3D, Databases, Data Analysis and Data Visualization! It's an incredible world!'
