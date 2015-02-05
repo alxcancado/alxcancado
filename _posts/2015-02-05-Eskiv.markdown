@@ -43,7 +43,7 @@
 						break;
 					}
 				});
-				u.initPlugin(jQuery("#unityPlayer")[0], "eskiv-web-player-1.037.unity3d");
+				u.initPlugin(jQuery("#unityPlayer")[0], "eskiv-web-player-1.11.unity3d");
 			});
 		-->
 		</script>
