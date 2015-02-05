@@ -1,10 +1,11 @@
-$('.img-responsive img-centered').click(function() {
-    $(console.log("AAA"));
-});
-
 <script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
 
 <script type="text/javascript">
+	$('.img-responsive img-centered').click(function() {
+    	$(console.log("AAA"));
+	});
+
+
 	<!--
 	var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
 	if (document.location.protocol == 'https:')
