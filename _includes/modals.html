@@ -105,20 +105,14 @@
 
 <script type="text/javascript">
         <!--
-            var config = {
-                width: 640, 
-                height: 480,
-                params: { enableDebugging:"0" }
-                
-            };
-            var u = new UnityObject2(config);
-            
             jQuery(function() {
 
                 var $missingScreen = jQuery("#unityPlayer").find(".missing");
                 var $brokenScreen = jQuery("#unityPlayer").find(".broken");
                 $missingScreen.hide();
                 $brokenScreen.hide();
+
+                var u = JQuery("UnityObject");
 
                 u.observeProgress(function (progress) {
                     switch(progress.pluginStatus) {
@@ -147,7 +141,7 @@
                         break;
                     }
                 });
-                u.initPlugin(jQuery("#unityPlayer")[0], "eskiv-web-player-1.11.unity3d");
+                u.initPlugin(jQuery("#unityPlayer")[0], "img/portfolio/{{ post.alt }}");
             });
         -->
 </script>
