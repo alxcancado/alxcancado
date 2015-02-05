@@ -1,3 +1,7 @@
+$('.img-responsive img-centered').click(function() {
+    $(printf("AAA"));
+});
+
 <script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
 
 <script type="text/javascript">
