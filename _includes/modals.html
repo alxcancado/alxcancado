@@ -15,10 +15,26 @@
                             <h2>{{ post.title }}</h2>
                             <hr class="star-primary">
 
-                            <div id="unityPlayer">
-                                <embed src="" type="application/vnd.unity" width="960" height="600" firstframecallback="UnityObject2.instances[0].firstFrameCallback();" enabledebugging="0" style="display: block; width: 960px; height: 600px;">
-                                
-                            </div>
+                            <!--Embed Unity3D files-->
+                            <object id="UnityObject"
+                                    classid="clsid:444785F1-DE89-4295-863A-D46C3A781394"
+                                    width="800"
+                                    height="450"
+                                    codebase="http://webplayer.unity3d.com/download_webplayer/UnityWebPlayer.cab#version=2,0,0,0">
+                            
+                             <!--change address below to match file path-->
+                             <!-- <param name="https://URLGOESHERE/FILENAME.unity3d" -->
+                             <param name="img/portfolio/{{ post.alt }}"
+                                    value="{{ post.alt }}" /> <!--change to name of unity file-->
+                            
+                            <!--change address below to match file path-->
+                             <embed id="UnityEmbed"
+                                    src="img/portfolio/{{ post.alt }}"
+                                    width="960"
+                                    height="600"
+                                    type="application/vnd.unity"
+                                    pluginspage="http://www.unity3d.com/unity-web-player-2.x" />
+                            </object>
                             
                             <a href="img/portfolio/{{ post.alt }}">
                                 <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}" />
@@ -48,120 +64,3 @@
         </div>
     </div>
 {% endfor %}
-
-<script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
-
-<script type="text/javascript">
-    <!--
-    var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
-    if (document.location.protocol == 'https:')
-        unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
-    document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
-    -->
-</script>
-
-<script type="text/javascript">
-    <!--
-        var config = {
-            width: 960, 
-            height: 600,
-            params: { enableDebugging:"0" }
-            
-        };
-        var u = new UnityObject2(config);
-        
-        jQuery(function() {
-
-            var $missingScreen = jQuery("#unityPlayer").find(".missing");
-            var $brokenScreen = jQuery("#unityPlayer").find(".broken");
-            $missingScreen.hide();
-            $brokenScreen.hide();
-
-            u.observeProgress(function (progress) {
-                switch(progress.pluginStatus) {
-                    case "broken":
-                        $brokenScreen.find("a").click(function (e) {
-                            e.stopPropagation();
-                            e.preventDefault();
-                            u.installPlugin();
-                            return false;
-                        });
-                        $brokenScreen.show();
-                    break;
-                    case "missing":
-                        $missingScreen.find("a").click(function (e) {
-                            e.stopPropagation();
-                            e.preventDefault();
-                            u.installPlugin();
-                            return false;
-                        });
-                        $missingScreen.show();
-                    break;
-                    case "installed":
-                        $missingScreen.remove();
-                    break;
-                    case "first":
-                    break;
-                }
-            });
-            u.initPlugin(jQuery("#unityPlayer")[0], "{{ img/portfolio/eskiv.unity3d }}");
-        });
-    -->
-</script>
-
-
-
-<style type="text/css">
-        <!--
-        body {
-            font-family: Helvetica, Verdana, Arial, sans-serif;
-            background-color: black;
-            color: white;
-            text-align: center;
-        }
-        a:link, a:visited {
-            color: #bfbfbf;
-        }
-        a:active, a:hover {
-            color: #bfbfbf;
-        }
-        p.header {
-            font-size: small;
-        }
-        p.header span {
-            font-weight: bold;
-        }
-        p.footer {
-            font-size: x-small;
-        }
-        div.content {
-            margin: auto;
-            width: 960px;
-        }
-        div.broken,
-        div.missing {
-            margin: auto;
-            position: relative;
-            top: 50%;
-            width: 193px;
-        }
-        div.broken a,
-        div.missing a {
-            height: 63px;
-            position: relative;
-            top: -31px;
-        }
-        div.broken img,
-        div.missing img {
-            border-width: 0px;
-        }
-        div.broken {
-            display: none;
-        }
-        div#unityPlayer {
-            cursor: default;
-            height: 600px;
-            width: 960px;
-        }
-        -->
-        </style>
