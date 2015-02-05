@@ -14,9 +14,20 @@
                         <div class="modal-body">
                             <h2>{{ post.title }}</h2>
                             <hr class="star-primary">
+                            
+                            <div id="unityPlayer">
+                                <div class="missing">
+                                    <a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+                                        <img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+                                    </a>
+                                </div>
+                            </div>
+
                             <a href="img/portfolio/{{ post.alt }}">
                                 <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
                             </a>
+                            
+
                             <p>{{ post.description }}</p>
                             <ul class="list-inline item-details">
                                 <li>Client:
