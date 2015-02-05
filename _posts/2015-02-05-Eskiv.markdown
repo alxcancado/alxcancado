@@ -2,7 +2,7 @@
 layout: default
 modal-id: 7
 date: 2015-02-05
-img: eskiv-web-player-1.11.unity3d
+img: eskiv.png
 alt: image-alt
 project-date: September 2014
 client: alxcancado
