@@ -16,6 +16,7 @@
                             <hr class="star-primary">
 
                             <div id="unityPlayer">
+                                <embed src="" type="application/vnd.unity" width="960" height="600" firstframecallback="UnityObject2.instances[0].firstFrameCallback();" enabledebugging="0" style="display: block; width: 960px; height: 600px;">
                                 
                             </div>
                             
@@ -103,7 +104,7 @@
                     break;
                 }
             });
-            u.initPlugin(jQuery("#unityPlayer")[0], "{{ post.alt }}");
+            u.initPlugin(jQuery("#unityPlayer")[0], "{{ img/portfolio/post.alt }}");
         });
     -->
 </script>
