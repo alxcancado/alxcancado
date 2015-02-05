@@ -1,3 +1,7 @@
+ <!-- Unity test -->
+    <script src="{{ "/js/unity.js" | prepend: site.baseurl }}"></script>
+
+
  <!-- Portfolio Modals -->
  {% for post in site.posts %}
     <div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog" aria-hidden="true">
@@ -16,7 +20,7 @@
                             <hr class="star-primary">
                             
                             <div id="unityPlayer">
-                                u.initPlugin(jQuery("#unityPlayer")[0], "{{ post.alt }}");
+                                {{ u.initPlugin(jQuery("#unityPlayer")[0], "{{ img/portfolio/post.alt }}"); }}
                                 <div class="missing">
                                     <a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
                                         <img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
