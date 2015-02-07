@@ -15,7 +15,7 @@
                             <h2>{{ post.title }}</h2>
                             <hr class="star-primary">
 
-                            {% if post.category == "Game Development" %}
+                            {% if {{ post.category }} == "Game" %}
                             {% <img src="img/portfolio/{{post.img}}"> %}   
                                 {% 
                                     <!--Embed Unity3D files-->
