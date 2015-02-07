@@ -15,7 +15,9 @@
                             <h2>{{ post.title }}</h2>
                             <hr class="star-primary">
                             
-                                    <!--Embed Unity3D files-->
+                            <div style="background-image: url(img/portfolio/{{ post.img }}); height: 480px; width: 640px; border: 1px solid black;">
+
+                                <!--Embed Unity3D files-->
                                     <object id="UnityObject"
                                             classid="clsid:444785F1-DE89-4295-863A-D46C3A781394"
                                             width="640"
@@ -35,8 +37,10 @@
                                             type="application/vnd.unity"
                                             pluginspage="http://www.unity3d.com/unity-web-player-2.x" />
                                     </object>
+                            </div>
+                                    
                             
-                                <img src="img/portfolio/{{ post.img }}"/>
+    
                             
 
                             
