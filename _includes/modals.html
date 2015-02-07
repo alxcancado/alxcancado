@@ -14,7 +14,6 @@
                         <div class="modal-body">
                             <h2>{{ post.title }}</h2>
                             <hr class="star-primary">
-                            
                             {% if post.category == "Game" %}
                                 <!--Embed Unity3D files-->
                                     <object id="UnityObject"
@@ -37,7 +36,7 @@
                                             pluginspage="http://www.unity3d.com/unity-web-player-2.x" />
                                     </object>       
                             {% else %}
-                                <div style="background-image: url(img/portfolio/{{ post.img }}); border: 1px solid black;"> </div>
+                                <img src="img/portfolio/{{ post.img }}"/>
                             {% endif %}
                             
                             <p>{{ post.description }}</p>
