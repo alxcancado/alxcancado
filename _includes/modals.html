@@ -14,12 +14,7 @@
                         <div class="modal-body">
                             <h2>{{ post.title }}</h2>
                             <hr class="star-primary">
-
-                            <br/> AAAA {{ post.category }}
-
-                            {% if {{ post.category }} == "Game" %}
-                            <img src="img/portfolio/{{post.img}}"/> 
-                                {% 
+                            
                                     <!--Embed Unity3D files-->
                                     <object id="UnityObject"
                                             classid="clsid:444785F1-DE89-4295-863A-D46C3A781394"
@@ -39,10 +34,10 @@
                                             height="480"
                                             type="application/vnd.unity"
                                             pluginspage="http://www.unity3d.com/unity-web-player-2.x" />
-                                    </object> %}
-                            {% else %}
+                                    </object>
+                            
                                 <img src="img/portfolio/{{ post.img }}"/>
-                            {% endif %}
+                            
 
                             
                             
