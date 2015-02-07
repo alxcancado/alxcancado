@@ -15,8 +15,7 @@
                             <h2>{{ post.title }}</h2>
                             <hr class="star-primary">
                             
-                            <div style="background-image: url(img/portfolio/{{ post.img }}); height: 480px; width: 640px; border: 1px solid black;">
-
+                            {% if post.category == Game %}
                                 <!--Embed Unity3D files-->
                                     <object id="UnityObject"
                                             classid="clsid:444785F1-DE89-4295-863A-D46C3A781394"
@@ -36,15 +35,10 @@
                                             height="480"
                                             type="application/vnd.unity"
                                             pluginspage="http://www.unity3d.com/unity-web-player-2.x" />
-                                    </object>
-                            </div>
-                                    
-                            
-    
-                            
-
-                            
-                            
+                                    </object>       
+                            {% else %}
+                                <div style="background-image: url(img/portfolio/{{ post.img }}); height: 480px; width: 640px; border: 1px solid black;"> </div>
+                            {% endif %}
                             
                             <p>{{ post.description }}</p>
                             <ul class="list-inline item-details">
