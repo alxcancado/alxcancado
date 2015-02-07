@@ -15,9 +15,11 @@
                             <h2>{{ post.title }}</h2>
                             <hr class="star-primary">
 
-                            <img src = "img/portfolio/{{ post.img }}">
+
 
                             <script type="text/javascript">
+
+                                document.write('<img src = "img/portfolio/{{ post.img }}">');
                                 if ("{{ post.category }}" == "Game Development") {
 
                                     <!--Embed Unity3D files-->
