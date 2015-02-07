@@ -15,40 +15,9 @@
                             <h2>{{ post.title }}</h2>
                             <hr class="star-primary">
 
+                            <div class="pluginOrPic"> 
 
-
-                            <script type="text/javascript">
-
-                                document.write("teste");
-                                if ("{{ post.category }}" == "Game Development") {
-
-                                    <!--Embed Unity3D files-->
-                                    <object id="UnityObject"
-                                            classid="clsid:444785F1-DE89-4295-863A-D46C3A781394"
-                                            width="640"
-                                            height="480"
-                                            codebase="http://webplayer.unity3d.com/download_webplayer/UnityWebPlayer.cab#version=2,0,0,0">
-                                    
-                                     <!--change address below to match file path-->
-                                     <!-- <param name="https://URLGOESHERE/FILENAME.unity3d" -->
-                                     <param name="img/portfolio/{{ post.alt }}"
-                                            value="{{ post.alt }}" /> <!--change to name of unity file-->
-                                    
-                                    <!--change address below to match file path-->
-                                     <embed id="UnityEmbed"
-                                            src="img/portfolio/{{ post.alt }}"
-                                            width="640"
-                                            height="480"
-                                            type="application/vnd.unity"
-                                            pluginspage="http://www.unity3d.com/unity-web-player-2.x" />
-                                    </object>
-
-                                } else {
-
-                                    <img src = "{{post.img}}">
-                                }
-
-                            </script>
+                            </div>
                             
                             
                             
@@ -75,3 +44,36 @@
         </div>
     </div>
 {% endfor %}
+
+<script type="text/javascript">
+
+    document.getElementById('pluginOrPic').innerHTML += '<img src="img/portfolio/'+{{ post.img }}'+">';
+    if ("{{ post.category }}" == "Game Development") {
+
+        <!--Embed Unity3D files-->
+        <object id="UnityObject"
+                classid="clsid:444785F1-DE89-4295-863A-D46C3A781394"
+                width="640"
+                height="480"
+                codebase="http://webplayer.unity3d.com/download_webplayer/UnityWebPlayer.cab#version=2,0,0,0">
+        
+         <!--change address below to match file path-->
+         <!-- <param name="https://URLGOESHERE/FILENAME.unity3d" -->
+         <param name="img/portfolio/{{ post.alt }}"
+                value="{{ post.alt }}" /> <!--change to name of unity file-->
+        
+        <!--change address below to match file path-->
+         <embed id="UnityEmbed"
+                src="img/portfolio/{{ post.alt }}"
+                width="640"
+                height="480"
+                type="application/vnd.unity"
+                pluginspage="http://www.unity3d.com/unity-web-player-2.x" />
+        </object>
+
+    } else {
+
+        <img src = "{{post.img}}">
+    }
+
+</script>
