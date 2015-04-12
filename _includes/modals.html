@@ -35,6 +35,9 @@
                                             type="application/vnd.unity"
                                             pluginspage="http://www.unity3d.com/unity-web-player-2.x" />
                                     </object>       
+                            
+                            {% elsif post.category == "Video" %}
+                                <iframe width="560" height="315" src="{{ post.alt }}" frameborder="0" allowfullscreen></iframe>
                             {% else %}
                                 <img src="img/portfolio/{{ post.img }}"/>
                             {% endif %}
