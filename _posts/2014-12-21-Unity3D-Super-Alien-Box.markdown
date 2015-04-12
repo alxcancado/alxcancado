@@ -8,5 +8,5 @@ project-date: December 2014
 client: alxcancado
 clientURL: https://alxcancado.github.io
 category: Game
-description: Unity3D + C# + Super Crate Boy. Snaping sprites and playing with ramdom direction enemy spawn similar with Super Crate Boy game.
+description: Unity 3D + C# + Super Crate Box. Random direction enemy spawning similar to Super Crate Box indie game.
 ---
